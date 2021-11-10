@@ -26,6 +26,13 @@ $spacers: (
    85: 85px,
 );
 @import "../lib/bootstrap/scss/bootstrap.scss";
+@mixin lineNum($num) {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: $num;
+   -webkit-box-orient: vertical;
+}
 
 body {
    background: #fff;
@@ -39,6 +46,17 @@ a {
 
 button {
    @include transition(0.3s all ease-in-out);
+}
+
+.svg {
+   display: none;
+}
+
+svg {
+   @include transition(0.3s all ease-in-out);
+   path {
+      @include transition(0.3s all ease-in-out);
+   }
 }
 
 .btn {
@@ -149,8 +167,74 @@ button {
 
 .what {
    background: url(../images/what-bg.jpg) no-repeat center center/cover;
+   position: relative;
+   .shape__top {
+      position: absolute;
+      width: 256px;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+      img {
+         transform: scale(-1, -1);
+         transform-origin: center center;
+      }
+   }
+   .shape__bottom {
+      position: absolute;
+      width: 256px;
+      z-index: 1;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+   }
+   .container {
+      position: relative;
+      z-index: 2;
+   }
    .what__items {
       .what__item {
+         background: #fff;
+         border-radius: 15px;
+         box-shadow: 0 3px 15px rgba(#000, 0.1);
+         @include transition(0.3s all ease-in-out);
+         .icon {
+            svg {
+               width: 62px;
+               height: 62px;
+               path {
+                  fill: $secondary;
+               }
+            }
+         }
+         .title {
+            font-size: 22px;
+         }
+         .desc {
+            @include lineNum(4);
+         }
+         a {
+            @include transition(0.3s all ease-in-out);
+         }
+         &:hover {
+            background: $primary;
+            color: #fff;
+            .icon {
+               svg {
+                  path {
+                     fill: #fff;
+                  }
+               }
+            }
+            a {
+               color: #fff;
+               svg {
+                  path {
+                     stroke: #fff;
+                  }
+               }
+            }
+         }
       }
    }
 }
