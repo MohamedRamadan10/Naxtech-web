@@ -81,99 +81,304 @@
       />
       <meta name="theme-color" content="#ffffff" />
       <title>NaxTech</title>
+      <link rel="stylesheet" href="./wwwroot/lib/slick-master/slick.css" />
+      <link
+         rel="stylesheet"
+         href="./wwwroot/lib/slick-master/slick-theme.css"
+      />
+      <link rel="stylesheet" href="./wwwroot/lib/animate/animate.min.css" />
       <link rel="stylesheet" href="./wwwroot/css/styles.min.css" />
    </head>
    <body>
-      <div class="about py-80">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-lg-5">
-                  <div class="img">
-                     <img
-                        src="./wwwroot/images/about.jpg"
-                        class="img-fluid"
-                        alt=""
-                     />
-                     <span
-                        class="
-                           experience
-                           ps-30
-                           py-20
-                           pe-20
-                           display-inline-block
-                           bg-secondary
-                           text-white
-                        "
-                     >
-                        <span class="num fw-bold d-block">
-                           <span class="counter">16</span>
-                           +
-                        </span>
-                        Years of experiences
-                     </span>
+      <div class="header fixed-top">
+         <div class="top__header">
+            <div class="container">
+               <div class="d-flex justify-content-between align-items-center">
+                  <div class="logo-brand">
+                     <a href="">
+                        <img
+                           src="./wwwroot/images/logo.svg"
+                           class="img-fluid"
+                           alt=""
+                        />
+                     </a>
                   </div>
-               </div>
-               <div class="col-lg-7">
-                  <div class="heading">
-                     <div class="title__sm">About Us</div>
-                     <h1 class="side__heading">
-                        Perfect Solution Makes a Success History Success People
-                     </h1>
-                  </div>
-                  <div class="desc mt-20">
-                     <p>
-                        Founded in 2005 in Reading (UK) Naxtech is an internet
-                        service provider focusing on helping businesses grow,
-                        increase profitability, while attracting new customers
-                        via the effective use of technology and internet
-                        marketing.
-                     </p>
-                     <p>
-                        We focus on being honest, practical, and straight to the
-                        point. The result comes first; not technology, budget or
-                        accepted practice.
-                     </p>
-                     <p>
-                        We work across different market sectors, such as:
-                        pharmaceuticals, tourism/travel/ hospitality, financial
-                        services, insurance, recruitment, property,
-                        entertainment, retail, ecommerce and local government.
-                        Our services and experience in these sectors extends to
-                        both small and large organisations.
-                     </p>
-                  </div>
-                  <div class="mt-50 text-end">
-                     <a href="" class="btn btn-outline-primary btn__outline"
-                        >Read More</a
-                     >
+                  <div class="contact__info d-flex">
+                     <div class="d-flex align-items-center">
+                        <img src="./wwwroot/images/email.svg" alt="" />
+                        <div class="title__info ms-15">
+                           <div class="title fw-bold text-primary">
+                              Email Us
+                           </div>
+                           <a
+                              herf="mailto:naxtech@info.com"
+                              class="text-secondary"
+                              >naxtech@info.com</a
+                           >
+                        </div>
+                     </div>
+                     <div class="d-flex align-items-center">
+                        <img src="./wwwroot/images/phone.svg" alt="" />
+                        <div class="title__info ms-15">
+                           <div class="title fw-bold text-primary">Call Us</div>
+                           <a
+                              herf="tel:+44 (0)845 643 2685"
+                              class="text-secondary"
+                              >+44 (0)845 643 2685</a
+                           >
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
+         <nav class="navbar navbar-expand-lg">
+            <div class="container">
+               <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+               >
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+               >
+                  <ul
+                     class="
+                        navbar-nav
+                        mx-auto
+                        justify-content-between
+                        w-100
+                        border-top
+                     "
+                  >
+                     <li class="nav-item col">
+                        <a class="nav-link active" href="#">Home</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Profile</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Services</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Products</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Clients</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Agenices</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Careers</a>
+                     </li>
+                     <li class="nav-item col">
+                        <a class="nav-link" href="#">Contact Us</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
       </div>
-      <div class="what py-80">
-         <div class="shape__top">
-            <img
-               src="./wwwroot/images/square-shape.png"
-               class="img-fluid"
-               alt=""
-            />
-         </div>
-         <div class="shape__bottom">
-            <img
-               src="./wwwroot/images/square-shape.png"
-               class="img-fluid"
-               alt=""
-            />
-         </div>
-         <div class="container">
-            <div class="heading text-center">
-               <div class="title__sm text-white">What We Do</div>
-               <h2 class="bottom__heading text-white">Real-World Experience</h2>
+      <div class="wrapper">
+         <div class="banner">
+            <div
+               class="banner__item"
+               style="background-image: url(./wwwroot/images/banner-bg.jpg)"
+            >
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-10 mx-auto">
+                        <div class="row">
+                           <div class="col-lg-5 offset-lg-1">
+                              <div
+                                 class="heading"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in=".5"
+                              >
+                                 <div class="title__sm">We Help Organize</div>
+                                 <h1 class="side__heading">
+                                    The Impressive Business Strategy
+                                 </h1>
+                              </div>
+                              <div
+                                 class="desc mt-30"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in="1"
+                              >
+                                 Our business consulting providing actionable
+                                 recommend to force enterprise transformation.
+                              </div>
+                              <div
+                                 class="mt-50 d-flex"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in="1.5"
+                              >
+                                 <a href="" class="btn btn-white me-25"
+                                    >Read More</a
+                                 >
+                                 <a href="" class="btn btn-primary"
+                                    >Get a Quote</a
+                                 >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="what__items mt-50">
-               <div class="row">
-                  <div class="col-lg-3">
+            <div
+               class="banner__item"
+               style="background-image: url(./wwwroot/images/banner-bg.jpg)"
+            >
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-10 mx-auto">
+                        <div class="row">
+                           <div class="col-lg-5 offset-lg-1">
+                              <div
+                                 class="heading"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in=".5"
+                              >
+                                 <div class="title__sm">We Help Organize</div>
+                                 <h1 class="side__heading">
+                                    The Impressive Business Strategy
+                                 </h1>
+                              </div>
+                              <div
+                                 class="desc mt-30"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in="1"
+                              >
+                                 Our business consulting providing actionable
+                                 recommend to force enterprise transformation.
+                              </div>
+                              <div
+                                 class="mt-50 d-flex"
+                                 data-animation-in="fadeInUp"
+                                 data-duration-in="1"
+                                 data-delay-in="1.5"
+                              >
+                                 <a href="" class="btn btn-white me-25"
+                                    >Read More</a
+                                 >
+                                 <a href="" class="btn btn-primary"
+                                    >Get a Quote</a
+                                 >
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="about py-xl-80 py-lg-60 py-md-30">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-5">
+                     <div class="img">
+                        <img
+                           src="./wwwroot/images/about.jpg"
+                           class="img-fluid"
+                           alt=""
+                        />
+                        <span
+                           class="
+                              experience
+                              ps-30
+                              py-20
+                              pe-20
+                              display-inline-block
+                              bg-secondary
+                              text-white
+                           "
+                        >
+                           <span class="num fw-bold d-block">
+                              <span class="counter">16</span>
+                              +
+                           </span>
+                           Years of experiences
+                        </span>
+                     </div>
+                  </div>
+                  <div class="col-lg-7">
+                     <div class="heading">
+                        <div class="title__sm">About Us</div>
+                        <h1 class="side__heading">
+                           Perfect Solution Makes a Success History Success
+                           People
+                        </h1>
+                     </div>
+                     <div class="desc mt-20">
+                        <p>
+                           Founded in 2005 in Reading (UK) Naxtech is an
+                           internet service provider focusing on helping
+                           businesses grow, increase profitability, while
+                           attracting new customers via the effective use of
+                           technology and internet marketing.
+                        </p>
+                        <p>
+                           We focus on being honest, practical, and straight to
+                           the point. The result comes first; not technology,
+                           budget or accepted practice.
+                        </p>
+                        <p>
+                           We work across different market sectors, such as:
+                           pharmaceuticals, tourism/travel/ hospitality,
+                           financial services, insurance, recruitment, property,
+                           entertainment, retail, ecommerce and local
+                           government. Our services and experience in these
+                           sectors extends to both small and large
+                           organisations.
+                        </p>
+                     </div>
+                     <div class="mt-50 text-end">
+                        <a href="" class="btn btn-outline-primary btn__outline"
+                           >Read More</a
+                        >
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="what py-xl-80 py-lg-60 py-md-30">
+            <div class="shape__top">
+               <img
+                  src="./wwwroot/images/square-shape.png"
+                  class="img-fluid"
+                  alt=""
+               />
+            </div>
+            <div class="shape__bottom">
+               <img
+                  src="./wwwroot/images/square-shape.png"
+                  class="img-fluid"
+                  alt=""
+               />
+            </div>
+            <div class="container">
+               <div class="heading text-center">
+                  <div class="title__sm text-white">What We Do</div>
+                  <h2 class="bottom__heading text-white">
+                     Real-World Experience
+                  </h2>
+               </div>
+               <div class="what__items mt-50">
+                  <div class="what__slider">
                      <div class="what__item h-100 p-30">
                         <div class="icon">
                            <img
@@ -201,24 +406,570 @@
                            </a>
                         </div>
                      </div>
+                     <div class="what__item h-100 p-30">
+                        <div class="icon">
+                           <img
+                              src="./wwwroot/images/icons/web.svg"
+                              class="svg"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title fw-bold mt-30">
+                           Web Development & Integration
+                        </div>
+                        <div class="desc mt-30">
+                           Online success requires a good and solid foundation
+                           for your business. With our bespoke web design and
+                           development service we look...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="what__item h-100 p-30">
+                        <div class="icon">
+                           <img
+                              src="./wwwroot/images/icons/e-online.svg"
+                              class="svg"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title fw-bold mt-30">
+                           Online and Email Marketing
+                        </div>
+                        <div class="desc mt-30">
+                           We can bring you in contact with businesses and
+                           people who are potentially interested in your
+                           services, products or research...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="what__item h-100 p-30">
+                        <div class="icon">
+                           <img
+                              src="./wwwroot/images/icons/competitor.svg"
+                              class="svg"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title fw-bold mt-30">
+                           Competitor Analysis
+                        </div>
+                        <div class="desc mt-30">
+                           See what your competition is doing offline and
+                           online. Our competition analysis service gives you an
+                           impressively useful...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      <div class="get__quote">
-         <div class="container px-40 py-50">
-            <div class="row align-items-center">
-               <div class="col-lg-7">
-                  <div class="heading">
-                     <h2>
-                        Assess your business potentials and find opportunities
-                        <span>for bigger success</span>
-                     </h2>
+         <div class="products py-xl-80 py-lg-60 py-md-30">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-4">
+                     <div class="heading">
+                        <div class="title__sm">Our Products</div>
+                        <h2 class="side__heading">
+                           We're Building a Sustainable and Exquisite Future
+                        </h2>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="product__item p-30 h-100">
+                        <div class="icon__title d-flex align-items-center">
+                           <div class="icon">
+                              <img
+                                 src="./wwwroot/images/icons/web-health.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="title fw-bold">
+                              Website Health Check / Audit
+                           </div>
+                        </div>
+                        <div class="desc mt-30">
+                           Your website is an important resource and the
+                           lifeblood of your company. With this in mind
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="product__item p-30 h-100">
+                        <div class="icon__title d-flex align-items-center">
+                           <div class="icon">
+                              <img
+                                 src="./wwwroot/images/icons/analysis.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="title fw-bold">Competition Analysis</div>
+                        </div>
+                        <div class="desc mt-30">
+                           We understand that business on the Internet is
+                           extremely competitive and we all need to...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="product__item p-30 h-100">
+                        <div class="icon__title d-flex align-items-center">
+                           <div class="icon">
+                              <img
+                                 src="./wwwroot/images/icons/social.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="title fw-bold">Social Media Monitor</div>
+                        </div>
+                        <div class="desc mt-30">
+                           Customer reviews and online comments have never been
+                           more relevant.
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="product__item p-30 h-100">
+                        <div class="icon__title d-flex align-items-center">
+                           <div class="icon">
+                              <img
+                                 src="./wwwroot/images/icons/e-data.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="title fw-bold">Email Data Lists</div>
+                        </div>
+                        <div class="desc mt-30">
+                           Often you may have a great product and if you could
+                           talk to the right people you are confident.
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4">
+                     <div class="product__item p-30 h-100">
+                        <div class="icon__title d-flex align-items-center">
+                           <div class="icon">
+                              <img
+                                 src="./wwwroot/images/icons/cms.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </div>
+                           <div class="title fw-bold">Content Management</div>
+                        </div>
+                        <div class="desc mt-30">
+                           When it comes to Content Management Systems (CMS) we
+                           do not work exclusively with only one ...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
                   </div>
                </div>
-               <div class="col text-end">
-                  <a href="" class="btn btn-primary"> Let's Talk </a>
+               <div class="text-center mt-20">
+                  <a href="" class="btn btn-outline-primary btn__outline"
+                     >View All Services</a
+                  >
+               </div>
+            </div>
+         </div>
+         <div class="sectors py-xl-80 py-lg-60 py-md-30">
+            <div class="container">
+               <div class="heading text-center">
+                  <div class="title__sm text-white">Our Sectors</div>
+                  <h2 class="bottom__heading text-white">
+                     Explore Our Sectors
+                  </h2>
+               </div>
+               <div class="sector__items">
+                  <div class="sector__slider">
+                     <div class="sector__item h-100 p-30">
+                        <div class="img">
+                           <img
+                              src="./wwwroot/images/sector-1.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title mt-30 fw-bold">
+                           Pharmaceuticals / Biotechnology / Healthcare
+                        </div>
+                        <div class="desc mt-30">
+                           Tourism, Travel and Hospitality are three closely
+                           related sectors with most of us being involved in
+                           them...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="sector__item h-100 p-30">
+                        <div class="img">
+                           <img
+                              src="./wwwroot/images/sector-2.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title mt-30 fw-bold">
+                           Travel, Tourism, Hospitality
+                        </div>
+                        <div class="desc mt-30">
+                           Tourism, Travel and Hospitality are three closely
+                           related sectors with most of us being involved in
+                           them ...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="sector__item h-100 p-30">
+                        <div class="img">
+                           <img
+                              src="./wwwroot/images/sector-3.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title mt-30 fw-bold">
+                           Financial Services / Insurance
+                        </div>
+                        <div class="desc mt-30">
+                           Tourism, Travel and Hospitality are three closely
+                           related sectors with most of us being involved in
+                           them...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                     <div class="sector__item h-100 p-30">
+                        <div class="img">
+                           <img
+                              src="./wwwroot/images/sector-4.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                        </div>
+                        <div class="title mt-30 fw-bold">
+                           Retail / eCommerce
+                        </div>
+                        <div class="desc mt-30">
+                           Tourism, Travel and Hospitality are three closely
+                           related sectors with most of us being involved in
+                           them...
+                        </div>
+                        <div class="text-end mt-50">
+                           <a href="">
+                              Read More
+                              <img
+                                 src="./wwwroot/images/arrow-long-link.svg"
+                                 class="svg"
+                                 alt=""
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="protfolio py-xl-80 py-lg-60 py-md-30">
+            <div class="container">
+               <div class="heading text-center">
+                  <div class="title__sm">Portfolio</div>
+                  <h2 class="bottom__heading line__color">
+                     Check Out Our Portfolio
+                  </h2>
+               </div>
+               <div class="protfolio__items mt-50">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-1.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-2.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-3.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-4.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-5.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                     <div class="col-lg-4">
+                        <a href="" class="protfolio__item d-block h-100">
+                           <div class="img">
+                              <img
+                                 src="./wwwroot/images/protolio-6.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <div
+                                 class="
+                                    data
+                                    d-flex
+                                    align-items-end
+                                    justify-content-between
+                                 "
+                              >
+                                 <div class="title">Project Name</div>
+                                 <div class="arrow">
+                                    <img
+                                       src="./wwwroot/images/arrow-white.svg"
+                                       alt=""
+                                    />
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="mt-20 text-center">
+                  <a href="" class="btn btn-outline-primary btn__outline"
+                     >View All Projects</a
+                  >
+               </div>
+            </div>
+         </div>
+         <div class="get__quote">
+            <div class="container px-40 py-50">
+               <div class="row align-items-center">
+                  <div class="col-lg-7">
+                     <div class="heading">
+                        <h2>
+                           Assess your business potentials and find
+                           opportunities
+                           <span>for bigger success</span>
+                        </h2>
+                     </div>
+                  </div>
+                  <div class="col text-end">
+                     <a href="" class="btn btn-primary"> Let's Talk </a>
+                  </div>
                </div>
             </div>
          </div>
@@ -322,6 +1073,8 @@
       <script src="./wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="./wwwroot/lib/counterup/jquery.counter.min.js"></script>
+      <script src="./wwwroot/lib/slick-master/slick.min.js"></script>
+      <script src="./wwwroot/lib/slick-master/slick-animation.min.js"></script>
       <script src="./wwwroot/js/scripts.js"></script>
    </body>
 </html>

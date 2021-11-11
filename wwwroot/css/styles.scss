@@ -39,6 +39,10 @@ body {
    color: $color-body;
 }
 
+.wrapper {
+   overflow-x: hidden;
+}
+
 a {
    text-decoration: none;
    @include transition(0.3s all ease-in-out);
@@ -54,13 +58,20 @@ button {
 
 svg {
    @include transition(0.3s all ease-in-out);
-   path {
+   path,
+   rect {
       @include transition(0.3s all ease-in-out);
    }
 }
 
+.container {
+   @include media-breakpoint-down(xl) {
+      max-width: 94%;
+   }
+}
+
 .btn {
-   box-shadow: 0 3px 15px rgba(#000, 0.1);
+   box-shadow: 0 3px 20px rgba(#000, 0.15);
    @include transition(0.3s all ease-in-out);
 }
 
@@ -82,7 +93,6 @@ svg {
    }
    &:hover {
       color: #fff;
-      background: transparent;
       &::before {
          width: 100%;
       }
@@ -99,6 +109,9 @@ svg {
       font-size: 40px;
       margin-bottom: 0;
       font-weight: bold;
+      @include media-breakpoint-down(xl) {
+         font-size: 30px;
+      }
       &.side__heading {
          padding-left: 15px;
          position: relative;
@@ -126,6 +139,11 @@ svg {
             height: 4px;
             background: #fff;
          }
+         &.line__color {
+            &::before {
+               background: $primary;
+            }
+         }
       }
    }
    .title__sm {
@@ -134,11 +152,187 @@ svg {
    }
 }
 
+.header {
+   @include transition(0.3s all ease-in-out);
+   padding: 30px 0;
+   .top__header {
+      padding-bottom: 30px;
+      @include transition(0.3s all ease-in-out);
+      .logo-brand {
+         max-width: 151px;
+         @include transition(0.3s all ease-in-out);
+         img {
+            width: 100%;
+         }
+      }
+      .contact__info {
+         font-size: 14px;
+         & > div {
+            &:not(:last-child) {
+               margin-right: 60px;
+            }
+         }
+      }
+   }
+   .navbar {
+      padding: 0;
+      .navbar-nav {
+         .nav-item {
+            .nav-link {
+               padding-top: 30px;
+               color: $color-body;
+               position: relative;
+               display: block;
+               text-align: center;
+               &::before {
+                  position: absolute;
+                  content: "";
+                  top: 30px;
+                  right: 0;
+                  width: 1px;
+                  height: 25px;
+                  background: $border-color;
+                  @include transition(0.3s all ease-in-out);
+               }
+               &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 0;
+                  height: 3px;
+                  background: $primary;
+                  @include transition(0.3s all ease-in-out);
+               }
+               &:hover,
+               &.active {
+                  &::after {
+                     width: 100%;
+                  }
+               }
+            }
+            &:last-child {
+               .nav-link {
+                  padding-left: 2rem;
+                  text-align: right;
+                  @include media-breakpoint-down(xl) {
+                     padding-left: 1rem;
+                  }
+                  &::before {
+                     display: none;
+                  }
+                  text-align: right;
+               }
+            }
+            &:first-child {
+               .nav-link {
+                  padding-right: 2rem;
+                  text-align: left;
+                  @include media-breakpoint-down(xl) {
+                     padding-right: 1rem;
+                  }
+               }
+            }
+            &:not(:last-child):not(:first-child) {
+               .nav-link {
+                  padding: 30px 2rem 0;
+                  text-align: center;
+                  @include media-breakpoint-down(xl) {
+                     padding: 30px 1rem 0;
+                  }
+               }
+            }
+         }
+      }
+   }
+   &.on__scroll {
+      background: #fff;
+      box-shadow: 0 3px 15px rgba(#000, 0.15);
+      padding: 15px 0;
+      .top__header {
+         padding-bottom: 15px;
+         .logo-brand {
+            max-width: 120px;
+         }
+      }
+      .navbar-nav {
+         .nav-item {
+            .nav-link {
+               padding: 15px 0 0;
+               &::before {
+                  top: 15px;
+               }
+            }
+            &:not(:last-child):not(:first-child) {
+               .nav-link {
+                  padding-top: 15px;
+               }
+            }
+         }
+      }
+   }
+}
+[data-animation-in] {
+   opacity: 0;
+   @include transition(0.3s all ease-in-out);
+}
+
+.banner {
+   .banner__item {
+      min-height: 875px;
+      padding: 50px 0;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+   }
+   .slick-arrow {
+      z-index: 3;
+      @include transition(0.3s all ease-in-out);
+      &::before {
+         content: "";
+         width: 56px;
+         height: 56px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         background: $primary;
+         @include transition(0.3s all ease-in-out);
+         @include media-breakpoint-down(xl) {
+            width: 45px;
+            height: 45px;
+         }
+      }
+      &.slick-next {
+         right: 5%;
+         left: auto;
+         &::before {
+            content: url(../images/arrow-white.svg);
+            margin-left: 2px;
+         }
+      }
+      &.slick-prev {
+         left: 5%;
+         right: auto;
+         &::before {
+            content: url(../images/arrow-white.svg);
+            transform: scale(-1, 1);
+            transform-origin: center;
+            margin-right: 2px;
+         }
+      }
+   }
+}
+
 .about {
    .img {
       img {
          border-radius: 15px;
-         box-shadow: 0 3px 15px rgba(#000, 0.1);
+         box-shadow: 0 3px 20px rgba(#000, 0.15);
       }
       position: relative;
       .experience {
@@ -148,7 +342,7 @@ svg {
          bottom: -20px;
          right: 30px;
          border-radius: 15px;
-         box-shadow: 0 3px 15px rgba(#000, 0.1);
+         box-shadow: 0 3px 20px rgba(#000, 0.15);
          &::before {
             content: url(../images/experiences.png);
             position: absolute;
@@ -193,25 +387,56 @@ svg {
       z-index: 2;
    }
    .what__items {
+      .slick-list {
+         margin: 0 -15px;
+      }
+      .slick-slide {
+         margin: 0 15px;
+      }
       .what__item {
          background: #fff;
          border-radius: 15px;
-         box-shadow: 0 3px 15px rgba(#000, 0.1);
+         box-shadow: 0 3px 20px rgba(#000, 0.15);
          @include transition(0.3s all ease-in-out);
+         & > div {
+            position: relative;
+            z-index: 2;
+         }
          .icon {
+            position: relative;
+            &::before {
+               content: "";
+               position: absolute;
+               bottom: -9px;
+               left: 28px;
+               width: 45px;
+               height: 45px;
+               background: rgba($primary, 0.2);
+               border-radius: 50%;
+               z-index: 1;
+               @include transition(0.3s all ease-in-out);
+            }
             svg {
                width: 62px;
                height: 62px;
-               path {
+               path,
+               rect {
                   fill: $secondary;
                }
             }
          }
          .title {
             font-size: 22px;
+            @include lineNum(2);
+            min-height: 66px;
+            @include media-breakpoint-down(xl) {
+               font-size: 18px;
+               min-height: 54px;
+            }
          }
          .desc {
             @include lineNum(4);
+            min-height: 96px;
          }
          a {
             @include transition(0.3s all ease-in-out);
@@ -220,8 +445,12 @@ svg {
             background: $primary;
             color: #fff;
             .icon {
+               &::before {
+                  background: rgba(#fff, 0.2);
+               }
                svg {
-                  path {
+                  path,
+                  rect {
                      fill: #fff;
                   }
                }
@@ -229,9 +458,216 @@ svg {
             a {
                color: #fff;
                svg {
+                  transform: translateX(2px);
                   path {
                      stroke: #fff;
                   }
+               }
+            }
+         }
+      }
+   }
+}
+
+.products {
+   .product__item {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 3px 20px rgba(#000, 0.15);
+      @include transition(0.3s all ease-in-out);
+      & > div {
+         position: relative;
+         z-index: 2;
+      }
+      .icon {
+         position: relative;
+         max-width: 73px;
+         margin-right: 20px;
+         &::before {
+            content: "";
+            position: absolute;
+            bottom: -9px;
+            left: 28px;
+            width: 45px;
+            height: 45px;
+            background: rgba($primary, 0.2);
+            border-radius: 50%;
+            z-index: 1;
+            @include transition(0.3s all ease-in-out);
+         }
+         svg {
+            width: 62px;
+            height: 62px;
+            path,
+            rect {
+               fill: $secondary;
+            }
+         }
+      }
+      .title {
+         font-size: 22px;
+         @include lineNum(2);
+         @include media-breakpoint-down(xl) {
+            font-size: 18px;
+         }
+      }
+      .desc {
+         @include lineNum(2);
+         min-height: 49px;
+      }
+      a {
+         @include transition(0.3s all ease-in-out);
+      }
+      &:hover {
+         background: $primary;
+         color: #fff;
+         .icon {
+            &::before {
+               background: rgba(#fff, 0.2);
+            }
+            svg {
+               path,
+               rect {
+                  fill: #fff;
+               }
+            }
+         }
+         a {
+            color: #fff;
+            svg {
+               transform: translateX(2px);
+               path {
+                  stroke: #fff;
+               }
+            }
+         }
+      }
+   }
+   .col-lg-4 {
+      margin-bottom: 30px;
+   }
+}
+
+.sectors {
+   background: url(../images/sector-bg.jpg) no-repeat center center/cover;
+   .sector__items {
+      margin-top: 80px;
+      .slick-list {
+         margin: 0 -15px;
+         padding-top: 70px;
+      }
+      .slick-slide {
+         margin: 0 15px;
+      }
+      .slick-dots {
+         bottom: -20px;
+      }
+      .sector__item {
+         background: #fff;
+         border-radius: 15px;
+         box-shadow: 0 3px 20px rgba(#000, 0.15);
+         @include transition(0.3s all ease-in-out);
+         & > div {
+            position: relative;
+            z-index: 2;
+         }
+         .img {
+            margin-top: -95px;
+            img {
+               width: 100%;
+               border-radius: 10px;
+               box-shadow: 0 3px 15px rgba(#000, 0.15);
+            }
+         }
+         .title {
+            font-size: 22px;
+            @include lineNum(3);
+            min-height: 99px;
+            @include media-breakpoint-down(xl) {
+               font-size: 18px;
+               min-height: 59px;
+            }
+         }
+         .desc {
+            @include lineNum(2);
+            min-height: 49px;
+         }
+         a {
+            @include transition(0.3s all ease-in-out);
+         }
+         &:hover {
+            background: $primary;
+            color: #fff;
+            a {
+               color: #fff;
+               svg {
+                  transform: translateX(2px);
+                  path {
+                     stroke: #fff;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+.protfolio {
+   .col-lg-4 {
+      margin-bottom: 30px;
+   }
+   .protfolio__items {
+      .protfolio__item {
+         .img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(#000, 0.15);
+            position: relative;
+            img {
+               width: 100%;
+            }
+            .data {
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background: rgba($color-body, 0.5);
+               color: #fff;
+               padding: 20px;
+               opacity: 0;
+               @include transition(0.3s all ease-in-out);
+               .title {
+                  font-size: 22px;
+                  margin-right: 5px;
+                  transform: translateX(-500px);
+                  @include transition(0.3s all ease-in-out);
+               }
+               .arrow {
+                  text-align: right;
+                  width: 46px;
+                  height: 46px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  background: $primary;
+                  border-radius: 50%;
+                  transform: translateX(500px);
+                  @include transition(0.3s all ease-in-out);
+                  img {
+                     width: 6px;
+                     height: auto;
+                  }
+               }
+            }
+         }
+         &:hover {
+            .data {
+               opacity: 1;
+               .title,
+               .arrow {
+                  transform: translateX(0);
                }
             }
          }
@@ -245,7 +681,7 @@ svg {
    .container {
       background: #fff;
       border-radius: 15px;
-      box-shadow: 0 0 15px rgba(#000, 0.1);
+      box-shadow: 0 0 20px rgba(#000, 0.15);
    }
    .heading {
       color: $secondary;
