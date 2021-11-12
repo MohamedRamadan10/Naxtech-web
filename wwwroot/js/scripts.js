@@ -1,4 +1,40 @@
 $(() => {
+	// Multi Dropdown
+	document.addEventListener("DOMContentLoaded", function () {
+		// make it as accordion for smaller screens
+		if (window.innerWidth < 992) {
+			// close all inner dropdowns when parent is closed
+			document
+				.querySelectorAll(".navbar .dropdown")
+				.forEach(function (everydropdown) {
+					everydropdown.addEventListener("hidden.bs.dropdown", function () {
+						// after dropdown is hidden, then find all submenus
+						this.querySelectorAll(".submenu").forEach(function (everysubmenu) {
+							// hide every submenu as well
+							everysubmenu.style.display = "none";
+						});
+					});
+				});
+
+			document.querySelectorAll(".dropdown-menu a").forEach(function (element) {
+				element.addEventListener("click", function (e) {
+					let nextEl = this.nextElementSibling;
+					if (nextEl && nextEl.classList.contains("submenu")) {
+						// prevent opening link if link needs to open dropdown
+						e.preventDefault();
+						if (nextEl.style.display == "block") {
+							nextEl.style.display = "none";
+						} else {
+							nextEl.style.display = "block";
+						}
+					}
+				});
+			});
+		}
+		// end if innerWidth
+	});
+	// DOMContentLoaded  end
+
 	//SVG converter
 	const svgConverter = function () {
 		$("img.svg").each(function () {
@@ -38,7 +74,7 @@ $(() => {
 	};
 
 	// Sm Menu
-   
+
 	const overlayHeader = $(".header .overlay__header");
 	const navbarToggler = $(".header .navbar-toggler");
 
@@ -65,6 +101,7 @@ $(() => {
 				dots: false,
 				arrows: true,
 				autoplay: true,
+            fade: true,
 			})
 			.slickAnimation();
 	}
@@ -75,6 +112,40 @@ $(() => {
 		counter.counterUp();
 	}
 
+	// Clients Slider
+	const clientSlider = $(".clients__slider");
+	if (clientSlider.length > 0) {
+		clientSlider.slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			arrows: true,
+			autoplay: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 1,
+					},
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 4,
+						slidesToScroll: 1,
+					},
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1,
+					},
+				},
+			],
+		});
+	}
+
 	// Sector Slider
 	const sectorSlider = $(".sector__slider");
 	if (sectorSlider.length > 0) {
@@ -83,7 +154,7 @@ $(() => {
 			slidesToScroll: 4,
 			arrows: false,
 			dots: true,
-         autoplay: true,
+			autoplay: true,
 			responsive: [
 				{
 					breakpoint: 1320,
@@ -118,7 +189,7 @@ $(() => {
 			slidesToScroll: 4,
 			arrows: false,
 			dots: true,
-         autoplay: true,
+			autoplay: true,
 			responsive: [
 				{
 					breakpoint: 1320,

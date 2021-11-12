@@ -35,7 +35,7 @@ $spacers: (
 }
 
 body {
-   font-family: 'Lato', sans-serif;
+	font-family: "Lato", sans-serif;
 	background: #fff;
 	color: $color-body;
 	@include media-breakpoint-down(md) {
@@ -79,6 +79,9 @@ svg {
 	@include transition(0.3s all ease-in-out);
 	@include media-breakpoint-down(lg) {
 		padding: 10px 25px;
+	}
+	@include media-breakpoint-down(md) {
+		font-size: 14px;
 	}
 }
 
@@ -163,6 +166,54 @@ svg {
 		color: $primary;
 		margin-bottom: 20px;
 	}
+}
+
+@media (min-width: 768px) {
+	.animate {
+		animation-duration: 0.3s;
+		-webkit-animation-duration: 0.3s;
+		animation-fill-mode: both;
+		-webkit-animation-fill-mode: both;
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+
+	0% {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slideIn {
+	0% {
+		-webkit-transform: transform;
+		-webkit-opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		-webkit-opacity: 1;
+	}
+
+	0% {
+		-webkit-transform: translateY(1rem);
+		-webkit-opacity: 0;
+	}
+}
+
+.slideIn {
+	-webkit-animation-name: slideIn;
+	animation-name: slideIn;
 }
 
 .header {
@@ -313,6 +364,69 @@ svg {
 						}
 					}
 				}
+				.dropdown-menu {
+					padding: 4px;
+					border-radius: 6px;
+					border: none;
+					box-shadow: 0 3px 15px rgba(#000, 0.15);
+					background: #fafafa;
+					width: 12rem;
+					white-space: normal;
+					@include media-breakpoint-down(lg) {
+						width: 100%;
+						box-shadow: none;
+						background: rgba($primary, 0.2);
+					}
+					li {
+						&:not(:last-child) {
+							margin-bottom: 5px;
+						}
+						.dropdown-item {
+							padding: 5px;
+							border-radius: 6px;
+							font-size: 15px;
+							white-space: normal;
+							@include media-breakpoint-down(lg) {
+								font-size: 18px;
+							}
+							@include media-breakpoint-down(md) {
+								font-size: 15px;
+							}
+							&:hover {
+								color: $secondary;
+								background: rgba($secondary, 0.1);
+							}
+						}
+					}
+				}
+				@media all and (min-width: 992px) {
+					.dropdown-menu li {
+						position: relative;
+					}
+					.nav-item .submenu {
+						display: none;
+						position: absolute;
+						left: 100%;
+						top: -7px;
+					}
+					.nav-item .submenu-left {
+						right: 100%;
+						left: auto;
+					}
+					.dropdown-menu > li:hover {
+						background-color: #f1f1f1;
+					}
+					.dropdown-menu > li:hover > .submenu {
+						display: block;
+					}
+				}
+				@media (max-width: 991px) {
+					.dropdown-menu .dropdown-menu {
+						margin-left: 0.7rem;
+						margin-right: 0.7rem;
+						margin-bottom: 0.5rem;
+					}
+				}
 			}
 			@include media-breakpoint-down(lg) {
 				position: fixed;
@@ -449,6 +563,7 @@ svg {
 		}
 	}
 }
+
 [data-animation-in] {
 	opacity: 0;
 	@include transition(0.3s all ease-in-out);
@@ -467,6 +582,9 @@ svg {
 		@include media-breakpoint-down(lg) {
 			min-height: 495px;
 			padding-top: 130px;
+		}
+		@include media-breakpoint-down(md) {
+			padding-top: 200px;
 		}
 	}
 	.slick-arrow {
@@ -691,6 +809,58 @@ svg {
 	}
 }
 
+.clients {
+	box-shadow: 0 3px 10px rgba(#000, 0.15);
+	.slick-list {
+		margin: 0 -5px;
+	}
+	.slick-slide {
+		margin: 0 5px;
+		text-align: center;
+	}
+	.slick-arrow {
+		z-index: 3;
+      top: 25%;
+		@include transition(0.3s all ease-in-out);
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+		&::before {
+			content: "";
+			width: 56px;
+			height: 56px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			@include transition(0.3s all ease-in-out);
+			@include media-breakpoint-down(xl) {
+				width: 45px;
+				height: 45px;
+			}
+		}
+		&.slick-next {
+			right: -35px;
+			left: auto;
+			&::before {
+				content: url(../images/color-arrow.svg);
+				margin-left: 2px;
+			}
+		}
+		&.slick-prev {
+			left:  -35px;
+			right: auto;
+			&::before {
+				content: url(../images/color-arrow.svg);
+				transform: scale(-1, 1);
+				transform-origin: center;
+				margin-right: 2px;
+			}
+		}
+	}
+}
+
 .products {
 	.product__item {
 		background: #fff;
@@ -849,7 +1019,7 @@ svg {
 				}
 				@include media-breakpoint-down(md) {
 					font-size: 16px;
-               min-height: 48px;
+					min-height: 48px;
 				}
 			}
 			.desc {
