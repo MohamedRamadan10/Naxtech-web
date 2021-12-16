@@ -101,7 +101,7 @@ $(() => {
 				dots: false,
 				arrows: true,
 				autoplay: true,
-            fade: true,
+				fade: true,
 			})
 			.slickAnimation();
 	}

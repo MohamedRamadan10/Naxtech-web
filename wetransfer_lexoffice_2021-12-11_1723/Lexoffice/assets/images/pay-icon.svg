@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36.238" height="33.294" viewBox="0 0 36.238 33.294">
+  <g id="pay-icon" transform="translate(1.379 1.379)">
+    <path id="Path_6" data-name="Path 6" d="M471.994,106.55H459.276l-.593.488a19.251,19.251,0,0,0,4.9,3.18c.684,2.941-2.4,3.625-3.9,2.6a20.525,20.525,0,0,0-5.723-1.918l-.36.291v7.949a1.288,1.288,0,0,0,1.293,1.288H472a1.288,1.288,0,0,0,1.288-1.288V107.848a1.288,1.288,0,0,0-1.3-1.3Zm-1.171,4.732a.927.927,0,0,1-.927.927H467.59a.922.922,0,0,1-.922-.927v-.752a.922.922,0,0,1,.922-.922h2.321a.922.922,0,0,1,.927.922Z" transform="translate(-438.433 -88.513)" fill="#266678"/>
+    <path id="Path_7" data-name="Path 7" d="M435.52,98a6.388,6.388,0,0,1,2.734,1.982c.753,1.229,2.459,6.152,4.923,6.629s6.5,1.367,8,2.4,4.584.344,3.9-2.6c0,0-6.152-2.65-7.318-6.82" transform="translate(-429.934 -84.494)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_8" data-name="Path 8" d="M463.454,95.266c-.27-6.7-4.3-8.272-6.015-8.548S445.06,82.41,445.06,82.41" transform="translate(-434.418 -77.166)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_9" data-name="Path 9" d="M479.77,106.26" transform="translate(-450.735 -88.377)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_10" data-name="Path 10" d="M40.956,28.68,39.25,30.323l.2,1.229" transform="translate(-18.418 -13.452)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <rect id="Rectangle_6" data-name="Rectangle 6" width="14.891" height="5.299" rx="2.65" transform="translate(0 12.613) rotate(-57.89)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

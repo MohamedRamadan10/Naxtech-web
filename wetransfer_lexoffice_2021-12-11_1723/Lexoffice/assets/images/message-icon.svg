@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30.779" height="29.105" viewBox="0 0 30.779 29.105">
+  <g id="message-icon" transform="translate(1 1)">
+    <path id="Path_31" data-name="Path 31" d="M346.49,373.05H322.512a2.435,2.435,0,0,0-2.423,2.429V392.69a2.429,2.429,0,0,0,2.423,2.423h3.9a.62.62,0,0,1,.62.62v3.717a.62.62,0,0,0,1.078.471l5.266-4.808h13.073a2.429,2.429,0,0,0,2.423-2.423V375.5a2.435,2.435,0,0,0-2.379-2.447Z" transform="translate(-320.09 -373.05)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <ellipse id="Ellipse_12" data-name="Ellipse 12" cx="1.673" cy="1.673" rx="1.673" ry="1.673" transform="translate(4.585 9.386)" fill="#266678"/>
+    <ellipse id="Ellipse_13" data-name="Ellipse 13" cx="1.673" cy="1.673" rx="1.673" ry="1.673" transform="translate(10.285 9.386)" fill="#266678"/>
+    <ellipse id="Ellipse_14" data-name="Ellipse 14" cx="1.673" cy="1.673" rx="1.673" ry="1.673" transform="translate(15.625 9.386)" fill="#266678"/>
+    <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="1.673" cy="1.673" rx="1.673" ry="1.673" transform="translate(21.102 9.386)" fill="#266678"/>
+  </g>
+</svg>

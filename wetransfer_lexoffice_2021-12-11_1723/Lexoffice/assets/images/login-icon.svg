@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.094" height="32.91" viewBox="0 0 29.094 32.91">
+  <g id="login-icon" transform="translate(1 1)">
+    <path id="Path_22" data-name="Path 22" d="M5.083,1H1V4.587" transform="translate(-1 -1)" fill="none" stroke="#266678" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_23" data-name="Path 23" d="M38.14,1h4.083V4.587" transform="translate(-15.129 -1)" fill="none" stroke="#266678" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_24" data-name="Path 24" d="M5.083,27.8H1V24.21" transform="translate(-1 -9.83)" fill="none" stroke="#266678" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_25" data-name="Path 25" d="M38.14,27.8h4.083V24.21" transform="translate(-15.129 -9.83)" fill="none" stroke="#266678" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="7.175" cy="8.414" rx="7.175" ry="8.414" transform="translate(6.208 1.945)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_26" data-name="Path 26" d="M291.46,357" transform="translate(-280.283 -337.762)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <path id="Path_27" data-name="Path 27" d="M285.449,356.25s.05.756.05,2.175-1.363,2.107-4.393,2.23a5.911,5.911,0,0,0-2.776.917,5.669,5.669,0,0,0-2.67,4.87v1.945h24.25v-1.945a5.675,5.675,0,0,0-2.664-4.87,5.929,5.929,0,0,0-2.776-.917c-3.036-.124-4.393-.805-4.393-2.23s-.05-2.175-.05-2.175" transform="translate(-274.272 -337.477)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

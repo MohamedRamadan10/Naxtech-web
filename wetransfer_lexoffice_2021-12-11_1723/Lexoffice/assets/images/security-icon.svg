@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.094" height="38.077" viewBox="0 0 29.094 38.077">
+  <g id="security-icon" transform="translate(1 1)">
+    <rect id="Rectangle_14" data-name="Rectangle 14" width="27.094" height="20.851" rx="6.91" transform="translate(0 15.226)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_28" data-name="Path 28" d="M332.35,387.59v-7.922s.048-7.558,8.714-7.558,8.778,7.74,8.778,7.74v7.74" transform="translate(-327.533 -372.11)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_29" data-name="Path 29" d="M336.35,388.521v-7.066s0-4.864,5.545-4.864,5.6,4.983,5.6,4.983v6.948" transform="translate(-328.365 -373.041)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_30" data-name="Path 30" d="M345.885,400.6a3.422,3.422,0,1,0-5.2,2.923.467.467,0,0,1,.206.4h0v3.612a1.569,1.569,0,1,0,3.137,0v-3.612h0a.46.46,0,0,1,.214-.4A3.414,3.414,0,0,0,345.885,400.6Z" transform="translate(-328.923 -377.318)" fill="#266678"/>
+  </g>
+</svg>
