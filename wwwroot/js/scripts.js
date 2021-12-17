@@ -72,7 +72,15 @@ $(() => {
 			header.removeClass("on__scroll");
 		}
 	};
-
+	if (header.hasClass("internal__menu")) {
+		window.onscroll = () => {
+			if (window.scrollY > 150) {
+				header.addClass("on__scroll");
+			} else {
+				header.removeClass("on__scroll");
+			}
+		};
+	}
 	// Sm Menu
 
 	const overlayHeader = $(".header .overlay__header");
