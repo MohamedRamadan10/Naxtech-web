@@ -74,7 +74,7 @@ $(() => {
 	};
 	if (header.hasClass("internal__menu")) {
 		window.onscroll = () => {
-			if (window.scrollY > 150) {
+			if (window.scrollY > 120) {
 				header.addClass("on__scroll");
 			} else {
 				header.removeClass("on__scroll");
